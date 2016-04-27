@@ -1,0 +1,113 @@
+/*
+Theme Name: Sean
+Author: Paul Schaefer
+Author URI: https://paulmakesthe.net/
+Version: 4.2.0
+*/
+@charset 'UTF-8';
+.disable-hover, .disable-hover * { pointer-events: none !important; }
+.no-scrolling { overflow: hidden; }
+::-moz-selection {
+	background-color: #1B3B6F;
+	text-shadow: none;
+	color: white;
+}
+::selection {
+	background-color: #1B3B6F;
+	text-shadow: none;
+	color: white;
+}
+body {
+	font: 18px/1.4 'Source Sans Pro', Helvetica, Arial, sans-serif;
+	background-image: url('includes/background.png');
+}
+img  { max-width: 100%; }
+a, a:hover, a:visited {
+	-webkit-transition: all .25s;
+	-moz-transition:    all .25s;
+	transition:         all .25s;
+	text-decoration: none;
+	color: inherit;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Playfair Display SC', Georgia, serif;
+	font-weight: normal;
+	line-height: 1;
+}
+header#header {
+	text-shadow: 1px 1px 0 rgba(255, 255, 255, .75), 2px 2px 2px rgba(0, 0, 0, .25);
+	margin-bottom: 2rem;
+	text-align: center;
+	color: #1B3B6F;
+}
+header#header h1 {
+	letter-spacing: 2px;
+	font-weight: 900;
+	margin: .5em 0 0;
+}
+header#header h4 {
+	letter-spacing: 3px;
+	font-weight: 700;
+	margin: .5em 0;
+}
+nav.menu-menu-1-container ul {
+	font: 24px/1 'Playfair Display SC', Georgia, serif;
+	margin: 0 auto;
+	padding: 1em 0;
+}
+nav.menu-menu-1-container ul li {
+	display: inline-block;
+	list-style: none;
+	padding: 0 5%;
+	color: #333;
+	margin:  0;
+}
+nav.menu-menu-1-container ul li a:hover {
+	text-decoration: underline;
+	color: #1B3B6F;
+}
+section.instagram_shots {
+	text-align: center;
+	margin:  4rem auto;
+}
+section.instagram_shots div.instashot { display: inline-block; }
+section.instagram_shots div.lightbox {
+	background-color: rgba(255, 255, 255, .5);
+	max-height: 85vh;
+	position: fixed;
+	display: none;
+	z-index: 999;
+	width:  100%;
+	left: 0;
+	top:  0;
+}
+section.instagram_shots div.lightbox:before {
+	vertical-align: middle;
+	display: inline-block;
+	content: '\200B';
+	height: 100%;
+}
+section.instagram_shots div.lightbox div.content {
+	background-color: white;
+	border: #aaa solid 1px;
+	vertical-align: middle;
+	display: inline-block;
+	padding: 5px;
+}
+section.instagram_shots div.lightbox div.content div.caption { max-width: 640px; }
+
+form.wpcf7-form input { margin-bottom: 0; }
+
+footer p {
+	font: 18px/1 'Playfair Display SC', Georgia, serif;
+	text-align: center;
+	margin: 2rem 0;
+	color: #545454;
+}
+footer p span {
+	display: inline-block;
+	padding-top: 1rem;
+	font-size: 1rem;
+}
+footer p span a       { border-bottom: 1px dotted; }
+footer p span a:hover { border-bottom: 1px  solid; }
