@@ -26,9 +26,11 @@ a, a:hover, a:visited {
 	-webkit-transition: all .25s;
 	-moz-transition:    all .25s;
 	transition:         all .25s;
+	border-bottom: 1px dotted;
 	text-decoration: none;
 	color: inherit;
 }
+a:hover { border-bottom: 1px solid; }
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Playfair Display SC', Georgia, serif;
 	font-weight: normal;
@@ -46,7 +48,7 @@ header#header h1 {
 	margin: .5em 0 0;
 }
 header#header h4 {
-	letter-spacing: 3px;
+	letter-spacing: 4px;
 	font-weight: 700;
 	margin: .5em 0;
 }
@@ -62,10 +64,8 @@ nav.menu-menu-1-container ul li {
 	color: #333;
 	margin:  0;
 }
-nav.menu-menu-1-container ul li a:hover {
-	text-decoration: underline;
-	color: #1B3B6F;
-}
+nav.menu-menu-1-container ul li a { border-bottom: none; }
+nav.menu-menu-1-container ul li a:hover { color: #1B3B6F; }
 section.instagram_shots {
 	text-align: center;
 	margin:  4rem auto;
@@ -109,5 +109,3 @@ footer p span {
 	padding-top: 1rem;
 	font-size: 1rem;
 }
-footer p span a       { border-bottom: 1px dotted; }
-footer p span a:hover { border-bottom: 1px  solid; }

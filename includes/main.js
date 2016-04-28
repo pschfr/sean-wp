@@ -39,7 +39,7 @@ $(function() {
 			$('body').toggleClass('no-scrolling');
 			$(lightbox).find('img').attr('src', $(this).attr('href'));
 			$(lightbox).find('div.caption').html($(this).find('img').attr('title'));
-			$(lightbox).animate({ 'opacity': 'toggle' }, 250);
+			$(lightbox).stop().animate({ 'opacity': 'toggle' }, 250);
 		});
 		// Destroys lightbox when clicked on border
 		$(lightbox).on('click', function() {
@@ -47,7 +47,7 @@ $(function() {
 			// Prevents the lag when switching the image quickly
 			$(this).find('img').attr('src',  '');
 			$(this).find('div.caption').html('');
-			$(this).animate({ 'opacity': 'toggle' }, 250);
+			$(this).stop().animate({ 'opacity': 'toggle' }, 250);
 			// Prevents lightbox from closing if you click on the image or caption
 			$(this).find('div.content').on('click', function() { return false; });
 		});
