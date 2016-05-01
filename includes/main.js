@@ -28,6 +28,13 @@ window.addEventListener('scroll', function() {
 }, false);
 
 $(function() {
+	// Pulls rendering information from the HTML, logs it in console
+	$('body').contents().filter(function(){
+		return this.nodeType == 8;
+	}).each(function(i, e) {
+		console.log('%c%s', 'font-weight:bold;', e.nodeValue);
+	});
+
 	if($('section.instagram_shots').length) {
 		console.log('instagram shots loaded successfully');
 		// Initialize commonly used elements for easier DOM manipulation
