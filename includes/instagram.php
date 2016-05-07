@@ -52,7 +52,6 @@ class instagramPHP {
                 // var_dump($istg);
                 // If you want to display another size, you can use 'low_resolution', or 'standard_resolution' in place of 'thumbnail'
                 $istg_thumbnail = $istg->{'images'}->{'thumbnail'}->{'url'};
-                // Link to the picture's instagram page, to link to the picture image only, use $istg->{'images'}->{'standard_resolution'}->{'url'}
                 $istg_link      = $istg->{'images'}->{'standard_resolution'}->{'url'};
                 $istg_caption   = $istg->{'caption'}->{'text'};
                 $simpleDisplay .= '<div class="instashot"><a class="lightbox" href="' . $istg_link . '"><img src="' . $istg_thumbnail . '" alt="' . $istg_caption . '" title="' . $istg_caption . '"></a></div>';

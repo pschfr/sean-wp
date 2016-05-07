@@ -75,15 +75,54 @@ remove_action('wp_head', 'rel_canonical');
 remove_action('wp_head', 'wp_oembed_add_discovery_links');
 remove_action('template_redirect', 'rest_output_link_header', 11, 0);
 
-// Custom ajax loader for CF7, has to be GIF
-// I'd love to use a CSS loader, research?
-// add_filter('wpcf7_ajax_loader', 'my_wpcf7_ajax_loader');
-// function my_wpcf7_ajax_loader () {
-// 	return  get_bloginfo('template_directory') . '/loader.gif';
-// }
+// Creates custom post type for recipes!
+// Register Custom Post Type
+function recipes_post_type() {
+	$labels = array(
+		'name'                  => 'Recipes',
+		'singular_name'         => 'Recipe',
+		'menu_name'             => 'Recipes',
+		'name_admin_bar'        => 'Recipes',
+		'archives'              => 'Recipe Archives',
+		'parent_item_colon'     => 'Parent Recipe:',
+		'all_items'             => 'All Recipes',
+		'add_new_item'          => 'Add New Recipe',
+		'add_new'               => 'Add New',
+		'new_item'              => 'New Recipe',
+		'edit_item'             => 'Edit Recipe',
+		'update_item'           => 'Update Recipe',
+		'view_item'             => 'View Recipe',
+		'search_items'          => 'Search Recipies',
+		'not_found'             => 'No recipes found',
+		'not_found_in_trash'    => 'No recipes found in Trash',
+		'featured_image'        => 'Featured Image',
+		'set_featured_image'    => 'Set featured image',
+		'remove_featured_image' => 'Remove featured image',
+		'use_featured_image'    => 'Use as featured image',
+		'insert_into_item'      => 'Insert into Recipe',
+		'uploaded_to_this_item' => 'Uploaded to this Recipe',
+		'items_list'            => 'Recipes list',
+		'items_list_navigation' => 'Recipes list navigation',
+		'filter_items_list'     => 'Filter recipes list',
+	);
+	$args = array(
+		'label'                 => 'Recipe',
+		'description'           => 'Featured Recipes to be displayed on home page',
+		'labels'                => $labels,
+		'supports'              => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'post-formats'),
+		'taxonomies'            => array('post_tag'),
+		'public'                => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 20,
+		'menu_icon'             => 'dashicons-carrot',
+		'capability_type'       => 'page',
+	);
+	register_post_type('recipe', $args);
+}
+add_action('init', 'recipes_post_type', 0);
+add_theme_support('post-thumbnails');
 
 // Logs DB Queries, Time Spent, and Memory Consumption
-add_action( 'wp_footer', 'performance', 20 );
 function performance($visible = false) {
     $stat = sprintf('%d queries in %.3f seconds, using %.2fMB memory',
         get_num_queries(),
@@ -92,3 +131,4 @@ function performance($visible = false) {
     );
     echo $visible ? $stat : "<!--{$stat}-->\r\n";
 }
+add_action('wp_footer', 'performance', 20);
