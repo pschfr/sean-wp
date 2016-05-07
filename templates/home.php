@@ -25,7 +25,7 @@ Template Name: Home Page
     ));
 
     while($randomRecipes->have_posts()) : $randomRecipes->the_post(); ?>
-        <div class="recipe columns medium-4 small-4">
+        <div class="recipe columns medium-4 small-12">
                 <?php the_post_thumbnail(); ?><br>
                 <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                 <?php the_title(); ?>
