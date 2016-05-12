@@ -32,7 +32,7 @@ a, a:hover, a:visited {
 }
 a:hover { border-bottom: 1px solid; }
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Playfair Display SC', Georgia, serif;
+	font-family: 'Tangerine', Georgia, serif;
 	font-weight: normal;
 	line-height: 1;
 }
@@ -40,21 +40,26 @@ header#header {
 	text-shadow: 1px 1px 0 rgba(255, 255, 255, .75), 2px 2px 2px rgba(0, 0, 0, .25);
 	margin-bottom: 2rem;
 	text-align: center;
+	font-weight: 700;
 	color: #1B3B6F;
 }
 header#header h1 {
-	letter-spacing: 2px;
-	font-weight: 900;
 	margin: .5em 0 0;
+	font-weight: 700;
+	font-size: 5rem;
 }
 header#header h4 {
-	letter-spacing: 4px;
-	font-weight: 700;
+	font: 1.5rem/1 'Source Sans Pro', Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: .2em;
 	margin: .5em 0;
 }
 nav.menu-menu-1-container ul {
-	font: 24px/1 'Playfair Display SC', Georgia, serif;
-	margin: 0 auto;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	font-weight: normal;
+	font-size: 18px;
+    margin: 0 auto;
 	padding: 1em 0;
 }
 nav.menu-menu-1-container ul li {
@@ -64,48 +69,22 @@ nav.menu-menu-1-container ul li {
 	color: #333;
 	margin:  0;
 }
-nav.menu-menu-1-container ul li a { border-bottom: none; }
-nav.menu-menu-1-container ul li a:hover { color: #1B3B6F; }
-section.instagram_shots {
-	text-align: center;
-	margin:  4rem auto;
+nav.menu-menu-1-container ul li a { border-bottom: 1px solid transparent; }
+nav.menu-menu-1-container ul li a:hover {
+	border-bottom: 1px solid #1B3B6F;
+	color: #1B3B6F;
 }
-section.instagram_shots div.instashot { display: inline-block; }
-section.instagram_shots div.lightbox {
-	background-color: rgba(255, 255, 255, .5);
-	max-height: 85vh;
-	position: fixed;
-	display: none;
-	z-index: 999;
-	width:  100%;
-	left: 0;
-	top:  0;
+h2.sub-heading {
+	font: bold 1.25rem/1 'Source Sans Pro', Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: .125rem;
 }
-section.instagram_shots div.lightbox:before {
-	vertical-align: middle;
-	display: inline-block;
-	content: '\200B';
-	height: 100%;
-}
-section.instagram_shots div.lightbox div.content {
-	background-color: white;
-	border: #aaa solid 1px;
-	vertical-align: middle;
-	display: inline-block;
-	padding: 5px;
-}
-section.instagram_shots div.lightbox div.content div.caption { max-width: 640px; }
-
+p.smaller { font-size: .9rem; }
+section.recipes, section.instagram_shots, aside#sidebar, footer#footer { margin-top: 4rem; }
 form.wpcf7-form input { margin-bottom: 0; }
-
 footer p {
-	font: 18px/1 'Playfair Display SC', Georgia, serif;
+	margin-bottom: 2rem;
 	text-align: center;
-	margin: 2rem 0;
+	font-size: 14px;
 	color: #545454;
-}
-footer p span {
-	display: inline-block;
-	padding-top: 1rem;
-	font-size: 1rem;
 }

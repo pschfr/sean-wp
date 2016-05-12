@@ -38,18 +38,7 @@ Template Name: Home Page
 ?>
 </section>
 <section class="instagram_shots">
-<?php
-    include(get_template_directory() . '/includes/instagram.php');
-    $isg   = new instagramPHP('seanmwoodsfood', '2092274.1677ed0.58ecb89ee52c47ab8ac5797f7564165c');
-    $shots = $isg->getUserMedia(array('count'=>32));
-    if(!empty($shots)) { echo $isg->simpleDisplay($shots); }
-?>
-<div class="lightbox">
-<div class="content">
-<img src="#">
-<div class="caption"></div>
-</div>
-</div>
+<?php echo do_shortcode('[instashow source="@seanmwoodsfood" cache_media_time="86400" effect="fade"]'); ?>
 </section>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
