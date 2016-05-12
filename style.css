@@ -51,8 +51,9 @@ header#header h1 {
 header#header h4 {
 	font: 1.5rem/1 'Source Sans Pro', Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
-	letter-spacing: .2em;
-	margin: .5em 0;
+	letter-spacing: .15em;
+	margin: 0 0 .5em;
+	opacity: .7;
 }
 nav.menu-menu-1-container ul {
 	text-transform: uppercase;
