@@ -20,4 +20,5 @@
 	'menu_class'     => 'small-12 columns',
 	'container'      => 'nav',
 )); ?>
+<hr>
 </header>
