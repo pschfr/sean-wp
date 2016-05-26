@@ -26,12 +26,3 @@ window.addEventListener('scroll', function() {
 		body.classList.remove('disable-hover');
 	}, 100);
 }, false);
-
-$(function() {
-	// Pulls rendering information from the HTML, logs it in console
-	$('body').contents().filter(function(){
-		return this.nodeType == 8;
-	}).each(function(i, e) {
-		console.log('%c%s', 'font-weight:bold;', e.nodeValue);
-	});
-});

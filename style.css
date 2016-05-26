@@ -6,20 +6,10 @@ Version: 4.2.0
 */
 @charset 'UTF-8';
 .disable-hover, .disable-hover * { pointer-events: none !important; }
-.no-scrolling { overflow: hidden; }
-::-moz-selection {
-	background-color: rgb(25, 59, 111);
-	text-shadow: none;
-	color: white;
-}
-::selection {
-	background-color: rgb(25, 59, 111);
-	text-shadow: none;
-	color: white;
-}
 body {
 	font: 18px/1.4 'Source Sans Pro', Helvetica, Arial, sans-serif;
 	background-image: url('includes/background.png');
+	overflow-x: hidden;
 }
 a, a:hover, a:visited {
 	-webkit-transition: all .25s;
@@ -57,7 +47,7 @@ header#header h1 {
 header#header h4 {
 	font: 1.5rem/1 'Source Sans Pro', Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
-	letter-spacing: .15em;
+	letter-spacing: .2em;
 	margin: 0 0 .5em;
 	opacity: .7;
 }
@@ -76,22 +66,88 @@ nav.menu-menu-1-container ul li {
 	color: #333;
 	margin:  0;
 }
-nav.menu-menu-1-container ul li a {
-	border-bottom: 1px solid transparent;
-	color: rgb(25, 59, 111);
-}
+nav.menu-menu-1-container ul li a       { border-bottom: 1px solid transparent; }
 nav.menu-menu-1-container ul li a:hover { border-bottom: 1px solid rgb(25, 59, 111); }
 h2.sub-heading {
 	font: bold 1.25rem/1 'Source Sans Pro', Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: .125rem;
+	color: rgb(25, 59, 111);
 }
-p.smaller { font-size: .9rem; }
-section.recipes, section.instagram_shots, aside#sidebar, footer#footer { margin-top: 4rem; }
-form.wpcf7-form input { margin-bottom: 0; }
+h3.sub-heading, aside#sidebar h2 {
+	color: rgb(25, 59, 111);
+	text-align: center;
+	font-size: 2.5rem;
+	font-weight: bold;
+	display: table;
+	white-space: nowrap;
+}
+h3.sub-heading:before, h3.sub-heading:after, aside#sidebar h2:before, aside#sidebar h2:after {
+	content: '';
+	display: table-cell;
+	position: relative;
+	border-top: 1px solid rgba(25, 59, 111, .5);
+	top: 1.25rem;
+	width: 45%;
+}
+h3.sub-heading:before, aside#sidebar h2:before { right: 1.5%; }
+h3.sub-heading:after,  aside#sidebar h2:after  { left:  1.5%; }
+section.instagram_shots, aside#sidebar, footer#footer { margin-top: 4rem; }
+input[type="submit"] {
+	background-color: white;
+	color: rgb(25, 59, 111);
+	font-weight: bold;
+	margin: 0 auto;
+	display: block;
+}
+div.wpcf7-response-output {
+	text-align: center;
+	padding: 0;
+	margin:  0;
+	border:  0;
+}
+div.wpcf7 img.ajax-loader {
+	margin: 1rem auto;
+	display: block;
+}
+span.wpcf7-not-valid-tip { display: none; }
+.wpcf7-not-valid { border-color: red; }
 footer p {
 	margin-bottom: 2rem;
 	text-align: center;
 	font-size: 14px;
 	color: #545454;
 }
+::-webkit-input-placeholder {
+	color: rgba(25, 59, 111, 0.5) !important;
+	font-style: italic;
+	font-weight: bold;
+}
+:-moz-placeholder {
+	color: rgba(25, 59, 111, 0.5) !important;
+	font-style: italic;
+	font-weight: bold;
+	opacity: 1;
+}
+::-moz-placeholder {
+	color: rgba(25, 59, 111, 0.5) !important;
+	font-style: italic;
+	font-weight: bold;
+	opacity: 1;
+}
+::-ms-input-placeholder {
+	color: rgba(25, 59, 111, 0.5) !important;
+	font-style: italic;
+	font-weight: bold;
+}
+::-moz-selection {
+	background-color: rgb(25, 59, 111);
+	text-shadow: none;
+	color: white;
+}
+::selection {
+	background-color: rgb(25, 59, 111);
+	text-shadow: none;
+	color: white;
+}
+@media only screen and (max-width: 40em) { small { font-size: 100%; } }

@@ -16,29 +16,10 @@ Template Name: Home Page
 <?php if ( ! post_password_required() ) comments_template( '', true ); ?>
 <?php endwhile; endif; ?>
 </section>
-<section class="recipes row">
-<?php
-    $randomRecipes = new WP_Query(array(
-        'post_type'      => 'recipe',
-        'orderby'        => 'rand',
-        'posts_per_page' => 3
-    ));
-
-    while($randomRecipes->have_posts()) : $randomRecipes->the_post(); ?>
-        <div class="recipe columns medium-4 small-12">
-                <?php the_post_thumbnail(); ?><br>
-                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                <?php the_title(); ?>
-            </a><br>
-            <p><?php the_excerpt(); ?></p>
-        </div>
-    <?php endwhile;
-
-    wp_reset_postdata();
-?>
-</section>
-<section class="instagram_shots">
+<section class="instagram_shots row">
+<h3 class="sub-heading">My Instagram Shots</h3>
 <?php echo do_shortcode('[instashow source="@seanmwoodsfood" cache_media_time="86400" effect="fade"]'); ?>
+<a href="https://instagram.com/seanmwoodsfood" target="_blank" class="call-out">View more on Instagram</a>
 </section>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
