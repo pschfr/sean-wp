@@ -11,7 +11,7 @@
 <title><?php bloginfo('name'); ?>, <?php is_front_page() ? bloginfo('description') : wp_title(''); ?></title>
 <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> id="top">
 <header id="header" class="row">
 <h1 class="small-12 columns"><?php bloginfo('name') ?></h1>
 <h4 class="small-12 columns"><?php bloginfo('description') ?></h4>
