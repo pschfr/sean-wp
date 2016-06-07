@@ -22,5 +22,5 @@ window.addEventListener('scroll', function() {
 }, false);
 
 // ZenScroll default tweaks
-var defaultDuration = 400, edgeOffset = 50;
+var defaultDuration = 500, edgeOffset = 50;
 zenscroll.setup(defaultDuration, edgeOffset);
