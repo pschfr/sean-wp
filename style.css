@@ -12,9 +12,6 @@ body {
 	overflow-x: hidden;
 }
 a, a:hover, a:visited {
-	-webkit-transition: all .25s;
-	-moz-transition:    all .25s;
-	transition:         all .25s;
 	border-bottom: 1px dotted;
 	text-decoration: none;
 	color: inherit;
@@ -26,80 +23,81 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1;
 }
 hr {
-	background-image: -webkit-linear-gradient(to right, rgba(0,0,0,0), rgba(25, 59, 111, .75), rgba(0,0,0,0));
-	background-image:         linear-gradient(to right, rgba(0,0,0,0), rgba(25, 59, 111, .75), rgba(0,0,0,0));
-	margin: .25rem auto;
+	background-image: -webkit-linear-gradient(to right, rgba(0,0,0,0), rgba(25, 59, 111, 0.75), rgba(0,0,0,0));
+	background-image:         linear-gradient(to right, rgba(0,0,0,0), rgba(25, 59, 111, 0.75), rgba(0,0,0,0));
+	margin: 0.25rem auto;
 	height: 1px;
     border: 0;
 }
 header#header {
-	text-shadow: 1px 1px 0 rgba(255, 255, 255, .75), 2px 2px 2px rgba(0, 0, 0, .25);
+	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.75), 2px 2px 2px rgba(0, 0, 0, 0.25);
 	color: rgb(25, 59, 111);
 	margin-bottom: 2rem;
 	text-align: center;
 	font-weight: 700;
 }
 header#header h1 {
-	margin: .5em 0 0;
+	margin: 2rem 0 0;
 	font-weight: 700;
 	font-size: 5rem;
 }
 header#header h4 {
 	font: 1.5rem/1 'Source Sans Pro', Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
-	letter-spacing: .2em;
-	margin: 0 0 .5em;
-	opacity: .7;
+	letter-spacing: 0.3rem;
+	margin: 0 0 0.25rem;
+	opacity: 0.7;
 }
 nav.menu-menu-1-container ul {
 	text-transform: uppercase;
-	letter-spacing: 0.2rem;
+	letter-spacing: 0.3rem;
 	font-weight: normal;
+	padding: 0 0 0.5rem;
 	font-size: 18px;
-    margin: 0 auto;
-	padding: 1em 0;
 }
 nav.menu-menu-1-container ul li {
 	display: inline-block;
-	list-style: none;
-	padding: 0 5%;
 	color: #333;
-	margin:  0;
 }
-nav.menu-menu-1-container ul li a       { border-bottom: 1px solid transparent; }
-nav.menu-menu-1-container ul li a:hover { border-bottom: 1px solid rgb(25, 59, 111); }
+nav.menu-menu-1-container ul li a { border-bottom: 0; }
+nav.menu-menu-1-container ul li a:hover { color: rgb(25, 59, 111); }
 h2.sub-heading {
 	font: bold 1.25rem/1 'Source Sans Pro', Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
-	letter-spacing: .125rem;
+	letter-spacing: 0.125rem;
 	color: rgb(25, 59, 111);
 }
 h3.sub-heading, aside#sidebar h2 {
 	color: rgb(25, 59, 111);
+	white-space: nowrap;
 	text-align: center;
 	font-size: 2.5rem;
 	font-weight: bold;
 	display: table;
-	white-space: nowrap;
 }
 h3.sub-heading:before, h3.sub-heading:after, aside#sidebar h2:before, aside#sidebar h2:after {
-	content: '';
+	border-top: 1px solid rgba(25, 59, 111, .5);
 	display: table-cell;
 	position: relative;
-	border-top: 1px solid rgba(25, 59, 111, .5);
 	top: 1.25rem;
+	content: '';
 	width: 45%;
 }
-h3.sub-heading:before, aside#sidebar h2:before { right: 1.5%; }
-h3.sub-heading:after,  aside#sidebar h2:after  { left:  1.5%; }
-section.instagram_shots, aside#sidebar, footer#footer { margin-top: 4rem; }
-input[type="submit"] {
-	background-color: white;
+h3.sub-heading:before, aside#sidebar h2:before  { right:  1.5%; }
+h3.sub-heading:after,  aside#sidebar h2:after   { left:   1.5%; }
+aside#sidebar div.columns h2, footer#footer { margin-top: 2rem; }
+.button.hollow.styled {
+	border-color: rgb(25, 59, 111);
 	color: rgb(25, 59, 111);
+	padding: 0.5rem 0.75rem;
+	font-size: 1.125rem;
 	font-weight: bold;
-	margin: 0 auto;
-	display: block;
 }
+.button.hollow.styled:focus, .button.hollow.styled:hover {
+	background-color: rgb(25, 59, 111);
+	color: white !important;
+}
+.instashow-gallery .instashow-gallery-media-cover, .instashow-gallery .instashow-gallery-control-arrow::before, .instashow-gallery .instashow-gallery-control-arrow::after, .instashow-gallery .instashow-gallery-control-arrow:hover::before, .instashow-gallery .instashow-gallery-control-arrow:hover::after { background: rgba(25, 59, 111, 0.9) !important; }
 div.wpcf7-response-output {
 	text-align: center;
 	padding: 0;
@@ -107,14 +105,12 @@ div.wpcf7-response-output {
 	border:  0;
 }
 div.wpcf7 img.ajax-loader {
-	margin: 1rem auto;
+	margin: 0.5rem auto;
 	display: block;
 }
 span.wpcf7-not-valid-tip { display: none; }
 .wpcf7-not-valid { border-color: red; }
 footer p {
-	margin-bottom: 2rem;
-	text-align: center;
 	font-size: 14px;
 	color: #545454;
 }

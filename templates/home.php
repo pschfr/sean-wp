@@ -16,10 +16,5 @@ Template Name: Home Page
 <?php if ( ! post_password_required() ) comments_template( '', true ); ?>
 <?php endwhile; endif; ?>
 </section>
-<section class="instagram_shots row">
-<h3 class="sub-heading" id="instagram">My Instagram Shots</h3>
-<?php echo do_shortcode('[instashow source="@seanmwoodsfood" cache_media_time="86400" effect="fade"]'); ?>
-<a href="https://instagram.com/seanmwoodsfood" target="_blank" class="call-out">View more on Instagram</a>
-</section>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

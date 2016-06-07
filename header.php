@@ -17,7 +17,7 @@
 <h4 class="small-12 columns"><?php bloginfo('description') ?></h4>
 <?php wp_nav_menu(array(
 	'theme_location' => 'first_menu',
-	'menu_class'     => 'small-12 columns',
+	'menu_class'     => 'small-12 columns menu menu-centered',
 	'container'      => 'nav',
 )); ?>
 <hr>
