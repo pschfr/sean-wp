@@ -5,7 +5,7 @@ function theme_enqueue_scripts() {
 	wp_deregister_script('jquery');   // We do this to include a more recent version
 	wp_enqueue_script('webfonts',   '//cdnjs.cloudflare.com/ajax/libs/webfont/1.6.22/webfontloader.js', '', '', true);
 	wp_register_script('jquery',   ('//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.min.js'), false, '', true);
-	wp_enqueue_script('zenscroll', get_template_directory_uri() . '/includes/zenscroll-min.js', '', '', true);
+	wp_enqueue_script('smoothscroll', get_template_directory_uri() . '/includes/smoothscroll.min.js', '', '', true);
 	wp_enqueue_script('main', get_template_directory_uri() . '/includes/main.js', array('jquery'), '', true );
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');

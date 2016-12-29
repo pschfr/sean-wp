@@ -20,7 +20,3 @@ window.addEventListener('scroll', function() {
 		body.classList.remove('disable-hover');
 	}, 100);
 }, false);
-
-// ZenScroll default tweaks
-var defaultDuration = 500, edgeOffset = 50;
-zenscroll.setup(defaultDuration, edgeOffset);
